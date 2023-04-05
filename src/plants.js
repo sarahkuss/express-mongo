@@ -31,7 +31,7 @@ export async function updatePlant(req, res) {
   
   await coll.findOneAndUpdate(
     { '_id' : docId },
-    { $set: { updatePlant} }
+    { $set: { updatePlant } }
   )
   res.status(201).send({message: 'plant has been updated'})
 }
