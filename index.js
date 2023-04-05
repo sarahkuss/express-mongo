@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 
-import { getAllPlants, addPlant } from './src/plants.js'
+import { getAllPlants, addPlant, deletePlant, updatePlant } from './src/plants.js'
 
 const PORT = 3001
 const app = express()
@@ -11,7 +11,8 @@ app.use(express.json())
 
 app.get('/plants', getAllPlants)
 app.post('/plants', addPlant)
-//app.patch('/plants/:plantId', updatePlant)
+app.delete('/plants/:docId', deletePlant)
+app.patch('/plants/:plantId', updatePlant)
 
 
 
