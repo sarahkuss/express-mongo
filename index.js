@@ -12,7 +12,7 @@ app.use(express.json())
 app.get('/plants', getAllPlants)
 app.post('/plants', addPlant)
 app.delete('/plants/:docId', deletePlant)
-app.patch('/plants/:plantId', updatePlant)
+app.patch('/plants/:docId', updatePlant)
 
 
 
