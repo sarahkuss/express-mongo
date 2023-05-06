@@ -24,7 +24,7 @@ export async function deletePlant(req, res){
   res.status(201).send({message: 'plant has been sadly deleted'})
 }
 
-//CRUD: UPDATE
+//CRUD: PATCH
 export async function updatePlant(req, res) {
   const docId = { '_id': new ObjectId(req.params.docId)}
   const updatePlant = { $set: req.body }
